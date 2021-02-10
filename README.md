@@ -126,31 +126,31 @@ curl -H "Content-Type: application/json" -X POST https://account-key-service.her
 - [x] Verify that columns have proper validation on the model.
 - [x] Verify that it is possible to search for a user by `email`, `full_name`,
       and `metadata` using a single search functionality.
-- [ ] Coverage should be 100% for app/models/user.rb
+- [x] Coverage should be 100% for app/models/user.rb
 
 #### User Service Routing
 
-- [ ] Verify that the GET /api/users endpoint routes to the appropriate method.
-- [ ] Verify that the POST /api/users endpoint routes to the appropriate method.
+- [x] Verify that the GET /api/users endpoint routes to the appropriate method.
+- [x] Verify that the POST /api/users endpoint routes to the appropriate method.
 
 #### User Controller
 
-- [ ] Verify that a request without a query parameter returns all users in the
+- [x] Verify that a request without a query parameter returns all users in the
       database using the specified JSON format, ordered by most recently created
       first.
-- [ ] Verify that a request with a query parameter returns all users in the
+- [x] Verify that a request with a query parameter returns all users in the
       database filtered by the query paramater, using the specified JSON format,
       ordered by most recently created first.
-- [ ] Verify that creating a new user works with unique values specified, and
+- [x] Verify that creating a new user works with unique values specified, and
       returns a single User JSON object and a 201 Created status header.
-- [ ] Verify that creating a new user with non-unique values specified, returns
+- [x] Verify that creating a new user with non-unique values specified, returns
       a 422 Unprocessable Entity status, and an array of errors in the specified
       JSON format.
-- [ ] Verify that a new user that is created has a random key generated for it on
+- [x] Verify that a new user that is created has a random key generated for it on
       the server side.
-- [ ] Verify that a new user that is created has it's password stored in a hashed
+- [x] Verify that a new user that is created has it's password stored in a hashed
       manner, with a salt value.
-- [ ] Verify that a new user that is created has an access_key created for it by
+- [x] Verify that a new user that is created has an access_key created for it by
       accessing the Account Key service.
 
 ## Getting Started
