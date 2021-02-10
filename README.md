@@ -179,3 +179,9 @@ curl -H "Content-Type: application/json" -X POST https://account-key-service.her
 ### Environment
 
 - Initial Rails 5.2 API application
+
+### Testing 
+
+This is a postman collection to test the endpoints created:
+
+https://www.getpostman.com/collections/59a237de0b5946f40e41
