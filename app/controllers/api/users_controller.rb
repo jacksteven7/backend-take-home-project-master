@@ -26,13 +26,9 @@ module Api
     end
 
     def filter_users(users)
-      #"name LIKE ? OR postal_code LIKE ?", "%#{search}%", "%#{search}%"
       [:email, :full_name, :metadata].each do |field|
         users = users.where("#{field.to_s} LIKE ? ", "%#{params[field]}%") if params[field].present?  
       end
-      #users = users.where(email: params[:email]) if params[:email].present?
-      #users = users.where(full_name: params[:full_name]) if params[:full_name].present?
-      #users = users.where(metadata: params[:metadata]) if params[:metadata].present?
       users
     end
 

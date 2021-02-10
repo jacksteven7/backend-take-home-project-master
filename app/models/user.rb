@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  validates :email,    uniqueness: true
-  validates :phone_number, uniqueness: true
+  validates :email,    uniqueness: true, presence: true
+  validates :phone_number, uniqueness: true, presence: true
   
 
   before_save :encrypt_password, :gen_key

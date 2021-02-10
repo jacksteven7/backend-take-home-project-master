@@ -116,7 +116,7 @@ curl -H "Content-Type: application/json" -X POST https://account-key-service.her
 - [x] Create Access Key service library
 - [x] On user create, trigger Sidekiq job for access Account Key service
 - [x] Perform retry on failure from Account Key service
-- [x] Update user model with `account_key` value
+- [x] Update user model with ` ` value
 
 ### Testing
 
