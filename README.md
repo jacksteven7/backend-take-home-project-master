@@ -29,30 +29,30 @@ below:
 
 ### GET /api/users
 
-- [ ] Return all current user records, most recently created first.
-- [ ] Optional `query` paramaters to filter results matching `email`, `full_name`,
+- [x] Return all current user records, most recently created first.
+- [x] Optional `query` paramaters to filter results matching ` `, `full_name`,
       and `metadata`. Return in most recently created first order.
-- [ ] 200 OK Response for all success cases
-- [ ] 422 Unprocessable Entity for malformed query parameters.
-- [ ] 5xx for server errors
+- [x] 200 OK Response for all success cases
+- [x] 422 Unprocessable Entity for malformed query parameters.
+- [x] 5xx for server errors
 
 ### POST /api/users
 
-- [ ] Create a new user record in the database.
-- [ ] On success, return JSON object of user that was just created
-- [ ] On success, return status code 201 Created
-- [ ] On failure, return status code 422 Unprocessable Entity with a list of all
+- [x] Create a new user record in the database.
+- [x] On success, return JSON object of user that was just created
+- [x] On success, return status code 201 Created
+- [x] On failure, return status code 422 Unprocessable Entity with a list of all
       the errors.
-- [ ] 5xx for server errors.
-- [ ] Endpoint can only accept `email`, `phone_number`, `full_name`, `password`,
+- [x] 5xx for server errors.
+- [x] Endpoint can only accept `email`, `phone_number`, `full_name`, `password`,
       and `metadata` fields.
-- [ ] `key` field should be generated server side when user is created
-- [ ] `password` should be stored hashed with a salt value.
+- [x] `key` field should be generated server side when user is created
+- [x] `password` should be stored hashed with a salt value.
 - [ ] `account_key` field should be generated from account key service.
 
 ### JSON Specifications
 
-- [ ] On creation of a new user, the response object should be in the following
+- [x] On creation of a new user, the response object should be in the following
       format:
 
 ```
@@ -66,7 +66,7 @@ below:
 }
 ```
 
-- [ ] On returning found users, the response object should be in the following
+- [x] On returning found users, the response object should be in the following
       format:
 
 ```
@@ -84,7 +84,7 @@ below:
 }
 ```
 
-- [ ] Errors should be returned as:
+- [x] Errors should be returned as:
 
 ```
 {
@@ -113,18 +113,18 @@ curl -H "Content-Type: application/json" -X POST https://account-key-service.her
 {"email":"user@example.com","account_key":"b97df97988a3832f009e2f18663ac932"}
 ```
 
-- [ ] Create Access Key service library
-- [ ] On user create, trigger Sidekiq job for access Account Key service
-- [ ] Perform retry on failure from Account Key service
-- [ ] Update user model with `account_key` value
+- [x] Create Access Key service library
+- [x] On user create, trigger Sidekiq job for access Account Key service
+- [x] Perform retry on failure from Account Key service
+- [x] Update user model with `account_key` value
 
 ### Testing
 
 #### User Model
 
-- [ ] Verify that all defined columns necessary exist.
-- [ ] Verify that columns have proper validation on the model.
-- [ ] Verify that it is possible to search for a user by `email`, `full_name`,
+- [x] Verify that all defined columns necessary exist.
+- [x] Verify that columns have proper validation on the model.
+- [x] Verify that it is possible to search for a user by `email`, `full_name`,
       and `metadata` using a single search functionality.
 - [ ] Coverage should be 100% for app/models/user.rb
 
